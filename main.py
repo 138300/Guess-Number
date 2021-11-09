@@ -11,10 +11,12 @@ class GuessNumberWindow(QMainWindow):
         self.game.setupUi(self)
         self.game.stackedWidget.setCurrentWidget(self.game.welcome_page)
         self.show()
-
+        
+        # change cerrunt page
         self.game.start_btn.clicked.connect(lambda :self.game.stackedWidget.setCurrentWidget(self.game.game_page))
         self.game.play_again_btn.clicked.connect(lambda :self.game.stackedWidget.setCurrentWidget(self.game.welcome_page))
-
+        
+        # controls buttons
         self.game.bigger_btn.clicked.connect(self.bigger_guess_number)
         self.game.smaller_btn.clicked.connect(self.smaller_guess_number)
         self.game.correct_btn.clicked.connect(self.correct_guess_number)
@@ -23,7 +25,8 @@ class GuessNumberWindow(QMainWindow):
         self.start,self.end=0,100
         self.guessed_number=random.randint(self.start,self.end)
         self.game.guessed_number.setText(str(self.guessed_number))
-
+    
+    # functions for guide the compuetr to guess the number
     def bigger_guess_number(self):
         self.end=self.guessed_number-1
         self.guessed_number=random.randint(self.start,self.end)
