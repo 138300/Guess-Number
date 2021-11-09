@@ -1,6 +1,4 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
 from guess_number import Ui_GuessNumber
 import random
 
