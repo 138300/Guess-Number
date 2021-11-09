@@ -8,4 +8,4 @@ you can choose a number in your mind and then computer will guess a nummber and 
 
 3.computer guess number
 
-4.guide computer
+4.guide the computer to guess the correct number
